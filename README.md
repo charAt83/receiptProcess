@@ -18,6 +18,16 @@ Springboot simplifies RESTful API creation with minimal effort.
   }
   ```
   With this we can expose any API with minimal or no configuration.
+
+# DOCKER SETUP AND RUN CONFIGURATIONS:
+For the sake of easy  evaluation, I have containarized this application in docker. I have pushed the docker image to my public docker hub. 
+* Docker hub user name: `saigude`
+* Docker image Name: `venkata_gude_receipt_process`
+* Image Tag: `rp_image1`
+ ## Run Configurations:
+ * Pull the image to your local docker hub.
+ * Then run the container and run configurations. In the run configurations, you need to select Host Port Mapping as `localhost` or `8080`.
+ * And run the container and Hit the end points with the following request body for POST api.
 # END POINTS
 ## POST API:
 * Path `http://localhost:8080/receipts/process`
