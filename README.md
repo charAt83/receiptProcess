@@ -3,7 +3,7 @@ Need to process the receipt and assign points to the particular receipt. Need to
 # END POINTS
 # POST API:
 http://localhost:8080/receipts/process
-Request Body: /n
+Request Body: 
 {
   "retailer": "Target",
   "purchaseDate": "2022-01-01",
