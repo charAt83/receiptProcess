@@ -1,5 +1,23 @@
 # receiptProcess
 Need to process the receipt and assign points to the particular receipt. Need to fetch the points for a particular receipt provided the receipt id.
+# Language and Framework Selection: 
+For this project, I have used Java Language and Springboot framework. Springboot eliminates the boilerplate code and provides built-in functionalities allowing me to quickly setup and develop applications with minimal configurations.
+## Rest API Development Made easy
+Springboot simplifies RESTful API creation with minimal effort.
+* Example: A REST API endpoint for Post mapping (POST API).
+  ```
+  @RestController
+  @RequestMapping("/receipts")
+  public class ReceiptController {
+
+  @PostMapping("/process")
+	public PostResponseBody receiptProcess(@RequestBody SimpleReceipt simpleReceipt) {
+		PostResponseBody id = receiptProcessService.receiptProcess(simpleReceipt);
+		return id;
+	}
+  }
+  ```
+  With this we can expose any API with minimal or no configuration.
 # END POINTS
 ## POST API:
 * Path `http://localhost:8080/receipts/process`
@@ -57,3 +75,5 @@ Need to process the receipt and assign points to the particular receipt. Need to
     "message": "No receipt found for that ID"
 }
 ```
+
+
