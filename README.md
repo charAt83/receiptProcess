@@ -1,9 +1,10 @@
 # receiptProcess
 Need to process the receipt and assign points to the particular receipt. Need to fetch the points for a particular receipt provided the receipt id.
 # END POINTS
-# POST API:
-http://localhost:8080/receipts/process
-Request Body: 
+## POST API:
+* Path `http://localhost:8080/receipts/process`
+* Request Body: 
+```json
 {
   "retailer": "Target",
   "purchaseDate": "2022-01-01",
@@ -28,26 +29,31 @@ Request Body:
   ],
   "total": "35.35"
 }
+```
 
-Success Response: 
+* Success Response: 
+```JSON
 {
     "id": "6c8f9d3e-f08b-4fd9-b951-c9119f8eaebc"
 }
+```
 
 
 
-# GET API
-http://localhost:8080/receipts/{id}/points
- Example: 
- http://localhost:8080/receipts/54e5a6c0-04f9-4664-80d4-935c5b83a73b/points
+## GET API
+* Path: `http://localhost:8080/receipts/{id}/points`
+* Example URL: `http://localhost:8080/receipts/54e5a6c0-04f9-4664-80d4-935c5b83a73b/points`
 
-Success Response: 
- {
+* Success Response: 
+ ```json
+  {
     "points": 28
   }
+```
 
-Failed Response: 
-Status Code: 404 Not Found
+* Failed Response:  Status Code: 404 Not Found
+```json
 {
     "message": "No receipt found for that ID"
 }
+```
